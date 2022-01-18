@@ -1,0 +1,8 @@
+<table>
+  <tr>
+    <th *ngFor="let header of headers">{{ header | titlecase }}</th>
+  </tr>
+  <tr *ngFor="let entity of entities">
+    <td *ngFor="let key of keys">{{ entity[key] }}</td>
+  </tr>
+</table>
