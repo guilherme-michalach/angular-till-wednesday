@@ -1,0 +1,26 @@
+<div id="nav-div">
+
+  <mat-menu #start="matMenu" #rootMenu="matMenu">
+    <button mat-menu-item class="options-menu">Tela Inicial</button>
+  </mat-menu>
+
+  <mat-menu #people="matMenu" #rootMenu="matMenu" class="options-menu">
+    <!-- <button mat-menu-item class="options-menu" (click)="goToClientForm()">Cadastrar Cliente</button> -->
+    <button mat-menu-item class="options-menu" (click)="goToClientList()">Lista de Clientes</button>
+  </mat-menu>
+
+  <mat-menu #products="matMenu" #rootMenu="matMenu" class="options-menu">
+    <button mat-menu-item class="options-menu">Cadastrar Produto</button>
+    <button mat-menu-item class="options-menu">Lista de Produtos</button>
+  </mat-menu>
+
+  <mat-menu #help="matMenu" #rootMenu="matMenu" class="options-menu">
+    <button mat-menu-item class="options-menu">Quem somos nós</button>
+    <button mat-menu-item class="options-menu">Dúvidas</button>
+  </mat-menu>
+
+<mat-button [matMenuTriggerFor]="start" class="nav-button">Inicio</mat-button>
+<mat-button [matMenuTriggerFor]="people" class="nav-button">Clientes</mat-button>
+<mat-button [matMenuTriggerFor]="products" class="nav-button">Produtos</mat-button>
+<mat-button [matMenuTriggerFor]="help" class="nav-button">Ajuda</mat-button>
+</div>

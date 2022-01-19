@@ -23,4 +23,9 @@ export class ListComponent implements OnInit {
     this.keys = Object.keys(this.entities[0]);
   }
 
+  goToAdd(): void {
+    this.router.navigate(['add'], { relativeTo: this.activatedRoute });
+  }
+
+
 }

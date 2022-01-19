@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { PersonModule } from './person/person.module';
 import { FeaturesRoutingModule } from './features-routing.module';
 import { AddressModule } from './address/address.module';
-import { HomePageModule } from './home-page/home-page.module';
+import { HomeModule } from './home/home.module';
+import { NavbarComponent } from '../core/components/navbar/navbar.component';
+import { CoreModule } from '../core/core.module';
 
 @NgModule({
   declarations: [],
@@ -11,8 +13,9 @@ import { HomePageModule } from './home-page/home-page.module';
     CommonModule,
     PersonModule,
     AddressModule,
-    HomePageModule,
-    FeaturesRoutingModule
+    FeaturesRoutingModule,
+    HomeModule,
+    CoreModule
   ]
 })
 export class FeaturesModule { }

@@ -10,7 +10,7 @@ const routes: Routes = [
     canActivate: [
       GuardsGuard
     ],
-    loadChildren: async () => import('./home-page/home-page.module').then((m) => m.HomePageModule)
+    loadChildren: async () => import('./home/home.module').then((m) => m.HomeModule)
   },
   {
     path: 'people',
