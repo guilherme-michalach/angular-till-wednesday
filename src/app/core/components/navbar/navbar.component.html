@@ -1,11 +1,12 @@
+<br>
 <div id="nav-div">
 
   <mat-menu #start="matMenu" #rootMenu="matMenu">
-    <button mat-menu-item class="options-menu">Tela Inicial</button>
+    <button mat-menu-item class="options-menu" (click)="goToStart()">Tela Inicial</button>
   </mat-menu>
 
   <mat-menu #people="matMenu" #rootMenu="matMenu" class="options-menu">
-    <!-- <button mat-menu-item class="options-menu" (click)="goToClientForm()">Cadastrar Cliente</button> -->
+    <button mat-menu-item class="options-menu" (click)="goToClientForm()">Cadastrar Cliente</button>
     <button mat-menu-item class="options-menu" (click)="goToClientList()">Lista de Clientes</button>
   </mat-menu>
 

@@ -10,7 +10,6 @@ import { CoreModule } from 'src/app/core/core.module';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    CoreModule
   ]
 })
 export class HomeModule { }

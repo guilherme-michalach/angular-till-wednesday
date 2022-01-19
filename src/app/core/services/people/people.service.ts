@@ -23,5 +23,36 @@ export class PeopleService {
     return this.http.get<Person[]>(this.baseUrl);
   }
 
+  setPerson(person: Person): void {
+    this._person.next(person);
+  }
+
+  submit(person: Person): Observable<Person> {
+    person.age = Number(person.age);
+    return this.http.post<Person>(this.baseUrl, person);
+  }
+
+  delete(id: number): Observable<Object> {
+    return this.http.delete(`${this.baseUrl}/${id}`);
+  }
+
+  getOne(id: number): Observable<Person> {
+    return this.http.get<Person>(`${this.baseUrl}/${id}`);
+  }
+
+  getPerson(): Observable<Person> {
+    return this._person.asObservable();
+  }
+
+  upsert(person: Person): Observable<Person> {
+    person.age = Number(person.age);
+    person.address = this.address.getAddress(person.address);
+
+    if (person.id) {
+      return this.http.patch<Person>(`${this.baseUrl}/${person.id}`, person);
+    } else {
+      return this.http.post<Person>(`${this.baseUrl}`, person);
+    }
+  }
 
 }

@@ -25,7 +25,7 @@ export class AddressDataResolver implements Resolve<Address> {
 
 const routes: Routes = [
   {
-    path: 'list',
+    path: '',
     component: ListComponent,
     resolve: {
       entities: AddressesDataResolver

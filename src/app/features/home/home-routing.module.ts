@@ -4,7 +4,7 @@ import { ViewComponent } from './view/view.component';
 
 
 const routes: Routes = [
-  {
+  { 
     path: '',
     component: ViewComponent
   }

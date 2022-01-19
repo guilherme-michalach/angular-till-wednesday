@@ -4,5 +4,5 @@ export interface Person {
   age: number;
   email: string;
   phone: string;
-  adressesId: number;
+  address: any;
 }

@@ -7,15 +7,39 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  linkOptions: string[] = ['', 'people/form', 'people/list', 'address/form', 'address/list', 'help/we', 'help/questions'];
+  linkOptions = ['', 'people/form', 'people', 'address/form', 'address/', 'help/we', 'help/questions'];
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
 
+  goToStart() {
+    this.router.navigate(['home'], { relativeTo: this.activatedRoute });
+  }
+
+  goToClientForm() {
+    this.router.navigate(['people/add']);
+  }
+
   goToClientList() {
-    this.router.navigate(['people/list'], { relativeTo: this.activatedRoute });
+    this.router.navigate(['people']);
+  }
+
+  goToProductList() {
+
+  }
+
+  goToProductForm() {
+
+  }
+
+  goToHelp() {
+
+  }
+
+  goToHelpQuestions() {
+
   }
 
 }

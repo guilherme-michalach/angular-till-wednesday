@@ -8,11 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [PageNotFoundComponent, NavbarComponent],
-  imports: [
-    CommonModule,
-    MatMenuModule,
-    MatButtonModule,
-  ],
-  exports: [NavbarComponent, MatMenuModule, MatButtonModule]
+  imports: [CommonModule, MatMenuModule, MatButtonModule],
+  exports: [NavbarComponent],
 })
-export class CoreModule { }
+export class CoreModule {}

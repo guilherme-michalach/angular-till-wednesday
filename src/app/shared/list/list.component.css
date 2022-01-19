@@ -1,9 +1,10 @@
 body {
-  background-color: #424242;
+  background: linear-gradient(
+    45deg, #faf6f6, #faf6ff);
 }
 
 .table-title-div {
-  background: white;
+  /* background: white; */
   padding: 5px;
   margin: auto;
   width: 10%;
@@ -22,18 +23,43 @@ body {
   margin-bottom: 20px;
 }
 
-.table-button {
-  background: white;
+.table-title-button {
+  background: linear-gradient(
+    45deg, #faf6f6, #faf6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 5px;
-  border-color: white;
+  margin: auto;
+  width: 10%;
+  margin-bottom: 20px;
+  background-color: inherit;
   box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+}
+
+.table-button {
+  /* Reset button preset style */
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+
+  text-decoration: none;
+
+  font-weight: 500;
+  font-size: 18px;
+  padding: 8px;
+  /* border: 1px solid black; */
+
 }
 
 .normal-table {
   background: white;
   width: 62%;
   text-align: center;
-  /* color: white; */
   margin: 0;
   margin-left: auto;
   margin-right: auto;

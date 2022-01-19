@@ -6,16 +6,17 @@ import { AddressModule } from './address/address.module';
 import { HomeModule } from './home/home.module';
 import { NavbarComponent } from '../core/components/navbar/navbar.component';
 import { CoreModule } from '../core/core.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    PersonModule,
-    AddressModule,
     FeaturesRoutingModule,
     HomeModule,
-    CoreModule
+    PersonModule,
+    ReactiveFormsModule
+    // AddressModule,
   ]
 })
 export class FeaturesModule { }
