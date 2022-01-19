@@ -7,6 +7,7 @@ import { FeaturesModule } from './features/features.module';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RouterModule } from '@angular/router';
     FeaturesModule,
     SharedModule,
     HttpClientModule,
-    RouterModule.forRoot([])
+    RouterModule.forRoot([]),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
