@@ -11,6 +11,7 @@
   </mat-menu>
 
   <mat-menu #products="matMenu" #rootMenu="matMenu" class="options-menu">
+    <button mat-menu-item class="options-menu" (click)="goToProductForm()">Cadastrar Produto</button>
     <button mat-menu-item class="options-menu" (click)="goToProductList()">Lista de Produtos</button>
   </mat-menu>
 
@@ -20,6 +21,6 @@
 
 <button mat-icon-button (click)="goToStart()" class="nav-button" id="normalButton">Inicio</button>
 <mat-button [matMenuTriggerFor]="people" class="nav-button">Clientes</mat-button>
-<button mat-icon-button (click)="goToProductList()" class="nav-button" id="normalButton2">Produtos</button>
-<button mat-icon-button (click)="goToHelp()" class="nav-button" id="normalButton3">Ajuda</button>
+<mat-button [matMenuTriggerFor]="products" class="nav-button">Produtos</mat-button>
+<button mat-icon-button (click)="goToHelp()" class="nav-button" id="normalButton">Ajuda</button>
 </div>

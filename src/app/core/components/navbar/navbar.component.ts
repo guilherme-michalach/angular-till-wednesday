@@ -30,6 +30,10 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['products']);
   }
 
+  goToProductForm() {
+    this.router.navigate(['products/add']);
+  }
+
   goToHelp() {
     this.router.navigate(['help']);
   }

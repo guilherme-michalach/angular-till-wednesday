@@ -7,11 +7,10 @@ import { ProductsService } from 'src/app/core/services/products/products.service
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  headers: string[] = ['Id', 'ImageUrl', 'Name', 'Department', 'Price ', 'Comment'];
+  headers: string[] = ['id', 'imageUrl', 'name', 'department', 'price ', 'comment'];
 
   constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
   }
-
 }
