@@ -11,6 +11,9 @@ export class FormComponent implements OnInit {
   @Input()
   formEntity: FormGroup;
 
+  @Input()
+  formSecondEntity: FormGroup;
+
   @Output()
   submit = new EventEmitter();
 

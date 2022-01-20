@@ -6,6 +6,7 @@
 //   zipcode: number;
 // }
 export interface Address {
+  map: any;
   cep: number;
   logradouro: string;
   complemento: string;

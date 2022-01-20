@@ -7,7 +7,10 @@ import { PeopleService } from 'src/app/core/services/people/people.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  headers: string[] = ['id', 'name', 'age', 'email', 'phone', 'address', 'options'];
+  headers: string[] = ['id', 'name', 'age', 'email', 'phone', 'address'];
+
+  // headers: string[] = ['id', 'name', 'age', 'email', 'phone', 'address', 'options'];
+
 
   constructor(private peopleService: PeopleService) { }
 

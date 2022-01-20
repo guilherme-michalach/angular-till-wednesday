@@ -10,8 +10,6 @@ import { Address } from '../../model/address';
 export class AddressService {
   private baseUrl = `${environment.baseUrl}/addresses`;
 
-  private cep: number = 0;
-
   private viaCep = `${environment.cepUrl}`;
 
   private _address = new Subject<Address>();
@@ -25,35 +23,17 @@ export class AddressService {
   getAddress(id: number): String {
     let cep = this.http.get<Address>(`${this.viaCep}/${id}/json`);
     let city;
-    cep.subscribe((value) => {
-      city = value.localidade;
-      return city
-    })
 
-  //   this.addressService.getOne(cep).subscribe((value) => {
-  //     return console.log(value.localidade);
-  //   })
-  // }
-
-    return city;
+    return JSON.stringify(city);
   }
 
-  test: string;
-
   getOne(id: number): Observable<Address> {
+    return this.http.get<Address>(`${this.viaCep}/${id}/json`);
+  }
+
+  getCityName(id: number) {
     let cep = this.http.get<Address>(`${this.viaCep}/${id}/json`);
-    let city;
-    cep.subscribe((value) => {
-      this.test = value.localidade;
-      return console.log(value.localidade)
-    })
 
-  //   this.addressService.getOne(cep).subscribe((value) => {
-  //     return console.log(value.localidade);
-  //   })
-  // }
-
-    return city;
   }
 
 }

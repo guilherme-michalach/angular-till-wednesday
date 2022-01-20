@@ -1,1 +1,17 @@
 <shared-form [formEntity]="formPerson" (submit)="submit($event)"></shared-form>
+
+<!-- <div class="form-div">
+  <form [formGroup]="formPerson">
+    <div *ngFor="let value of keys">
+      <label [for]="value">{{ value | titlecase }}:</label>
+      <br />
+        <input *ngIf="[]" type="text" [formControlName]="value" [id]="value" />
+      <br />
+    </div>
+    <br />
+    <div>
+      <button type="button" (click)="clickOnSubmit($event)">Submit</button>
+      <button type="button" (click)="goBack()">Cancel</button>
+    </div>
+  </form>
+</div> -->

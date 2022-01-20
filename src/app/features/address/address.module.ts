@@ -13,6 +13,7 @@ import { FormComponent } from './form/form.component';
     CommonModule,
     AddressRoutingModule,
     SharedModule
-  ]
+  ],
+  exports: [ListComponent, FormComponent]
 })
 export class AddressModule { }

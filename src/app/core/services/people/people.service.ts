@@ -6,7 +6,7 @@ import { Person } from '../../model/Person';
 import { AddressService } from '../address/address.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PeopleService {
   private baseUrl = `${environment.baseUrl}/people`;
@@ -15,9 +15,7 @@ export class PeopleService {
 
   private _person = new Subject<Person>();
 
-  constructor(private http: HttpClient, private address: AddressService) {
-
-  }
+  constructor(private http: HttpClient, private address: AddressService) {}
 
   all(): Observable<Person[]> {
     return this.http.get<Person[]>(this.baseUrl);
@@ -44,9 +42,14 @@ export class PeopleService {
     return this._person.asObservable();
   }
 
+
   upsert(person: Person): Observable<Person> {
     person.age = Number(person.age);
-    person.address = this.address.getAddress(person.address);
+
+    // person.address = this.address.getOne(person.address).subscribe((value) => {
+    //   this.cepName[0] = (value.localidade)
+    //   console.log(this.cepName[0])
+    // });
 
     if (person.id) {
       return this.http.patch<Person>(`${this.baseUrl}/${person.id}`, person);
@@ -54,5 +57,4 @@ export class PeopleService {
       return this.http.post<Person>(`${this.baseUrl}`, person);
     }
   }
-
 }
