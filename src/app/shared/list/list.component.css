@@ -71,6 +71,7 @@ body {
   text-align: center;
   font-size: 20px;
   padding-top: 18px;
+  padding-bottom: 30px;
   padding-left: 0px;
   border-bottom-style: none;
 }
@@ -81,6 +82,7 @@ th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:
 
 .mat-info {
   text-align: center;
+  font-weight: 500;
   font-size: 16px;
   margin-right: 0;
   padding: 8px;

@@ -13,8 +13,7 @@ export class ListComponent implements OnInit {
   @Output()
   deleteEntity = new EventEmitter();
 
-  @Output()
-  searchEntity = new EventEmitter();
+  hasImage: any = "<img [src]='ent[header]'>";
 
   entities: any[];
   keys: string[];
@@ -24,6 +23,7 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.data.subscribe((value: any) => {
       this.entities = value.entities;
+
     });
 
     this.keys = Object.keys(this.entities[0]);

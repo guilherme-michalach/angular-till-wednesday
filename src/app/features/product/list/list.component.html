@@ -1,4 +1,29 @@
-<shared-list
+<!-- <shared-list
 [headers]="headers">
-</shared-list>
+</shared-list> -->
+
+
+
+<div class="table-title-div">
+  <h1 class="table-title">Table</h1>
+</div>
+
+<div class="table-title-button">
+  <button (click)="goToAdd()" class="table-button">Add</button>
+</div>
+
+<table class="normal-table">
+  <tr>
+    <th *ngFor="let header of headers" class="header">{{ header | titlecase }}</th>
+  </tr>
+  <tr *ngFor="let product of products">
+    <td class="info">{{ product.id }}</td>
+    <td class="info"><img [src]="product.imageUrl" alt="" class="table-image"></td>
+    <td class="info">{{ product.name }}</td>
+    <td class="info">{{ product.department }}</td>
+    <td class="info">{{ product.price }}</td>
+    <td class="info">{{ product.comment }}</td>
+  </tr>
+</table>
+
 

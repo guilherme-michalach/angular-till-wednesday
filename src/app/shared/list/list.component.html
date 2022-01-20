@@ -1,5 +1,5 @@
 <div class="table-title-div">
-<h1 class="table-title">Tabela</h1>
+  <h1 class="table-title">Table</h1>
 </div>
 
 <div class="table-title-button">
@@ -9,8 +9,8 @@
 <mat-table [dataSource]="entities" class="mat-elevation-z8 normal-table">
   <ng-container [matColumnDef]="header" *ngFor="let header of headers">
     <th mat-header-cell *matHeaderCellDef>{{ header | titlecase }}</th>
-    <td *matCellDef="let ent" class="mat-info" (click)="onDeleteEntity(ent.Id)">{{ ent[header.toLowerCase()] }}</td>
+      <td *matCellDef="let ent" class="mat-info">{{ ent[header] }}</td>
   </ng-container>
-    <tr mat-header-row *matHeaderRowDef="headers"></tr>
-    <tr mat-row *matRowDef="let entrow; columns: headers;">{{ entrow.Id }}</tr>
+  <tr mat-header-row *matHeaderRowDef="headers"></tr>
+  <tr mat-row *matRowDef="let entrow; columns: headers;">{{ entrow.Id }}</tr>
 </mat-table>
