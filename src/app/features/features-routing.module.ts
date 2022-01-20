@@ -22,10 +22,22 @@ const routes: Routes = [
       import('./person/person.module').then((m) => m.PersonModule),
   },
   {
-    path: 'address',
+    path: 'addresses',
     canActivate: [GuardsGuard],
     loadChildren: async () =>
       import('./address/address.module').then((m) => m.AddressModule),
+  },
+  {
+    path: 'products',
+    canActivate: [GuardsGuard],
+    loadChildren: async () =>
+      import('./product/product.module').then((m) => m.ProductModule),
+  },
+  {
+    path: 'help',
+    canActivate: [GuardsGuard],
+    loadChildren: async () =>
+      import('./help/help.module').then((m) => m.HelpModule),
   },
   {
     path: '**',

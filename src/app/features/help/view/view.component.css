@@ -1,0 +1,22 @@
+.help-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.help-title {
+  text-align: center;
+  margin: 40px 0;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.help-section p {
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.help-section p:first-child {
+  font-size: 32px;
+}

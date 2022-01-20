@@ -1,0 +1,6 @@
+<h1 class="help-title">Dúvidas sobre o sistema</h1>
+
+<div *ngFor="let header of headerNumbers" class="help-section">
+  <p>{{ header }}</p>
+  <p *ngFor="let dummy of dummies">{{ dummy }}</p>
+</div>

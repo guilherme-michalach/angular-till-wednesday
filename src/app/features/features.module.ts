@@ -7,6 +7,8 @@ import { HomeModule } from './home/home.module';
 import { NavbarComponent } from '../core/components/navbar/navbar.component';
 import { CoreModule } from '../core/core.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HelpModule } from './help/help.module';
+import { ProductModule } from './product/product.module';
 
 @NgModule({
   declarations: [],
@@ -15,7 +17,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     FeaturesRoutingModule,
     HomeModule,
     PersonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HelpModule,
+    ProductModule
     // AddressModule,
   ]
 })

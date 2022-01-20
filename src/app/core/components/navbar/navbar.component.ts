@@ -27,15 +27,11 @@ export class NavbarComponent implements OnInit {
   }
 
   goToProductList() {
-
-  }
-
-  goToProductForm() {
-
+    this.router.navigate(['products']);
   }
 
   goToHelp() {
-
+    this.router.navigate(['help']);
   }
 
   goToHelpQuestions() {

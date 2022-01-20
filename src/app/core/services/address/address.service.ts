@@ -27,7 +27,7 @@ export class AddressService {
     let city;
     cep.subscribe((value) => {
       city = value.localidade;
-      return city = value.localidade +  console.log(value.localidade)
+      return city
     })
 
   //   this.addressService.getOne(cep).subscribe((value) => {
@@ -35,7 +35,7 @@ export class AddressService {
   //   })
   // }
 
-    return console.log(city) + city;
+    return city;
   }
 
   test: string;
