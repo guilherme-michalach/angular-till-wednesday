@@ -4,10 +4,6 @@
   padding: 8px;
 }
 
-form {
-
-}
-
 label, input, button {
   padding: 5px;
   margin: 12px;
@@ -20,8 +16,6 @@ input {
 }
 
 button {
-  /* background: linear-gradient(
-    45deg, #faf6f6, #faf6ff); */
   display: flex;
   justify-content: center;
   align-items: center;
