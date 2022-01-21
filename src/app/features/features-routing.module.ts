@@ -21,12 +21,14 @@ const routes: Routes = [
     loadChildren: async () =>
       import('./person/person.module').then((m) => m.PersonModule),
   },
-  {
-    path: 'addresses',
-    canActivate: [GuardsGuard],
-    loadChildren: async () =>
-      import('./address/address.module').then((m) => m.AddressModule),
-  },
+  // {
+  //   path: 'addresses',
+  //   canActivate: [GuardsGuard],
+  //   loadChildren: async () =>
+  //     import('./address/address.module').then((m) => m.AddressModule),
+  // },
+
+  // Rota desativada para desenvolver em outro momento
   {
     path: 'products',
     canActivate: [GuardsGuard],
