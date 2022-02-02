@@ -3,7 +3,12 @@
     <div *ngFor="let value of keys">
       <label [for]="value">{{ value | titlecase }}:</label>
       <br />
-        <input *ngIf="[]" type="text" [formControlName]="value" [id]="value" />
+        <input *ngIf="value !== 'address'" type="text" [formControlName]="value" [id]="value" />
+
+        <div *ngIf="value === 'address'" [formGroupName]="value">
+          <input type="text" name="id" formControlName="zipCode" (blur)="searchZip()">
+          <input type="text" name="id" formControlName="city">
+        </div>
       <br />
     </div>
     <br />

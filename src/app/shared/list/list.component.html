@@ -9,7 +9,7 @@
 <mat-table [dataSource]="entities" class="mat-elevation-z8 normal-table">
   <ng-container [matColumnDef]="header" *ngFor="let header of headers">
     <th mat-header-cell *matHeaderCellDef>{{ header | titlecase }}</th>
-      <td *matCellDef="let ent" class="mat-info">{{ ent[header] }}</td>
+      <td *matCellDef="let ent" class="mat-info"><button mat-stroked-button class="button-28" role="button-28">{{ ent[header] }}</button></td>
   </ng-container>
   <tr mat-header-row *matHeaderRowDef="headers"></tr>
   <tr mat-row *matRowDef="let entrow; columns: headers;">{{ entrow.Id }}</tr>

@@ -16,6 +16,7 @@ export class ListComponent implements OnInit {
     'department',
     'price',
     'comment',
+    'edit'
   ];
 
   products: Product[] = [];

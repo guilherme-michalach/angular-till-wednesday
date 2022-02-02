@@ -26,7 +26,13 @@ export class FormComponent implements OnInit {
       age: ['', [Validators.min(18), Validators.max(80)]],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required],
-      address: ''
+      address: this.formBuilder.group({
+        id: '',
+        city: '',
+        county: '',
+        state: '',
+        zipCode: '',
+      })
     });
   }
 
