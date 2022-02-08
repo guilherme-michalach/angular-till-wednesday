@@ -19,8 +19,31 @@
     <button mat-menu-item class="options-menu">Dúvidas</button>
   </mat-menu>
 
-<button mat-icon-button (click)="goToStart()" class="nav-button" id="normalButton">Inicio</button>
-<mat-button [matMenuTriggerFor]="people" class="nav-button">Clientes</mat-button>
-<mat-button [matMenuTriggerFor]="products" class="nav-button">Produtos</mat-button>
-<button mat-icon-button (click)="goToHelp()" class="nav-button" id="normalButton">Ajuda</button>
+  <div class="menu_buttons" [ngClass]="labels">
+    <div class="options_w_label">
+      <label for="icon" (click)="goToStart()">{{labels[0]}}</label>
+      <button mat-icon-button (click)="goToStart()">
+        <mat-icon aria-hidden="true" aria-label="home" class="icon">home</mat-icon>
+      </button>
+    </div>
+    <div class="options_w_label">
+      <label for="icon" [matMenuTriggerFor]="people">{{labels[1]}}</label>
+      <button mat-icon-button [matMenuTriggerFor]="people">
+        <mat-icon aria-hidden="true" aria-label="clients" class="icon">people</mat-icon>
+      </button>
+    </div>
+    <div class="options_w_label">
+      <label for="icon" [matMenuTriggerFor]="products">{{labels[2]}}</label>
+      <button mat-icon-button [matMenuTriggerFor]="products">
+        <mat-icon aria-hidden="true" aria-label="products" class="icon">inventory_2</mat-icon>
+      </button>
+    </div>
+    <div class="options_w_label">
+      <label for="icon" (click)="goToHelp()">{{labels[3]}}</label>
+      <button mat-icon-button (click)="goToHelp()">
+        <mat-icon aria-hidden="true" aria-label="help" class="icon">help</mat-icon>
+      </button>
+    </div>
+  </div>
+
 </div>

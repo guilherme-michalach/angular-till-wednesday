@@ -4,11 +4,11 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
-
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [PageNotFoundComponent, NavbarComponent],
-  imports: [CommonModule, MatMenuModule, MatButtonModule],
+  imports: [CommonModule, MatMenuModule, MatButtonModule, MatIconModule],
   exports: [NavbarComponent],
 })
 export class CoreModule {}

@@ -7,7 +7,9 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  linkOptions = ['', 'people/form', 'people', 'address/form', 'address/', 'help/we', 'help/questions'];
+  linkOptions: string[] = ['', 'people/form', 'people', 'address/form', 'address/', 'help/we', 'help/questions'];
+
+  labels: string[] = ['Home', 'Clients', 'Products', 'Help'];
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 

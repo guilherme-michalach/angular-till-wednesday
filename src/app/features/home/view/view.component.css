@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-  width: 100%;
+  width: fit-content;
 }
 
 .content-div {
@@ -15,7 +15,7 @@
 .content-div:nth-child(2) {
   border-left: 3px solid black;
   width: 2%;
-  height: 650px;
+  height: 700px;
   position: absolute;
   margin-top: 165px;
   left: 50%;
